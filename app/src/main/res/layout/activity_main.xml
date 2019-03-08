@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_activity_text_view"
+        android:text="@string/main_activity_text"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:layout_marginBottom="300px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/main_activity_text_edit"
+        android:background="@color/white"
+        android:hint="Start typing your text"
+
+        android:singleLine="true"
+        android:layout_width="600px"
+        android:layout_height="100px" />
+
+    <TextView
+        android:id="@+id/main_activity_text_hint"
+        android:text="@string/main_activity_pass_hint"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/main_activity_submit"
+        android:text="@string/main_activity_submit"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="1px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

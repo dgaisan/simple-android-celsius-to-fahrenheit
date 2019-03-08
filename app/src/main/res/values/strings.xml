@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Celcius-to-Farenheit</string>
+
+    <string name="main_activity_text">Enter Password to Sign into App</string>
+    <string name="main_activity_submit">Sign In</string>
+    <string name="main_activity_pass_hint">*use password: "unsecured"</string>
+</resources>
