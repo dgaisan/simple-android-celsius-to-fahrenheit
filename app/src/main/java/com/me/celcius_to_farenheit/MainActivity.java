@@ -1,6 +1,7 @@
 package com.me.celcius_to_farenheit;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +25,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (getResources().getString(R.string.main_activity_unsecure_password).equals(text.getText().toString())) {
-
+                    startActivity(new Intent(getApplicationContext(), ActivityConverter.class));
                 } else {
                     text.setError(getResources().getString(R.string.main_activity_password_invalid));
                 }

@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/black"
+    tools:context=".ActivityConverter">
+
+    <TextView
+        android:id="@+id/main_activity_text_view"
+        android:text="@string/converter_activity_text"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:layout_marginBottom="300px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/converter_activity_text_edit"
+        android:background="@color/white"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:layout_width="600px"
+        android:layout_height="100px" />
+
+    <TextView
+        android:id="@+id/converter_activity_results"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/converter_activity_submit"
+        android:text="@string/main_activity_submit"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="1px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

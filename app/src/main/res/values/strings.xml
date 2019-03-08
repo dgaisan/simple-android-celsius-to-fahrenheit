@@ -7,4 +7,6 @@
     <string name="main_activity_unsecure_password">unsecured</string>
     <string name="main_activity_password_invalid">Invalid Password</string>
 
+    <string name="converter_activity_text">Enter Degrees for Conversion:</string>
+
 </resources>
