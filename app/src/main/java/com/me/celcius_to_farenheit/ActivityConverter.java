@@ -2,8 +2,8 @@ package com.me.celcius_to_farenheit;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -12,7 +12,7 @@ public class ActivityConverter extends Activity {
 
     private TextView resultView;
     private EditText text;
-    private Boolean isCelsius = true;
+    private Boolean convertToFahrenheit = true;
 
     @Override
     protected void onCreate(Bundle bundle) {
@@ -23,7 +23,6 @@ public class ActivityConverter extends Activity {
     }
 
     private void initControls() {
-        final Button submit = findViewById(R.id.converter_activity_submit);
         final RadioGroup radioGroup = findViewById(R.id.converter_radiogroup);
         text = findViewById(R.id.converter_activity_text_edit);
         resultView = findViewById(R.id.converter_activity_results);
@@ -31,35 +30,42 @@ public class ActivityConverter extends Activity {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                isCelsius = group.getCheckedRadioButtonId() == R.id.converter_set_celsius;
-                //if ()
+                convertToFahrenheit = group.getCheckedRadioButtonId() == R.id.converter_to_fahrenheit;
+                renderResult();
             }
         });
 
-        submit.setOnClickListener(new View.OnClickListener() {
+        text.setOnKeyListener(new View.OnKeyListener() {
             @Override
-            public void onClick(View v) {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
                 renderResult();
+                return false;
             }
         });
     }
 
     private void renderResult() {
         String textValue = text.getText().toString();
+        Double value;
 
         if (textValue == "" || textValue.isEmpty()) {
-            // No value, nothing to calculate
             resultView.setText("");
             return;
         }
 
-        Double value = Double.valueOf(textValue);
-        String result = "";
+        try {
+            value = Double.valueOf(textValue);
+        } catch (Exception e) {
+            resultView.setText(getResources().getString(R.string.conversion_error));
+            return;
+        }
 
-        if (isCelsius) {
-           // result = String.valueOf(value )
+        String result;
+
+        if (convertToFahrenheit) {
+            result = String.format("%s Celsius equals to %.2f Fahrenheit",textValue, value * 9 / 5 + 32);
         } else {
-
+            result = String.format("%s Fahrenheit equals to %.2f Celsius", textValue, (value - 32) * 5 / 9);
         }
         resultView.setText(result);
     }

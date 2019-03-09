@@ -21,14 +21,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <RadioButton
-            android:id="@+id/converter_set_celsius"
-            android:text="@string/set_celsius"
+            android:id="@+id/converter_to_fahrenheit"
+            android:text="@string/to_fahrenheit"
             android:checked="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <RadioButton
-            android:id="@+id/converter_set_fahrenheit"
-            android:text="@string/set_fahrenheit"
+            android:id="@+id/converter_to_celsius"
+            android:text="@string/to_celsius"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RadioGroup>
@@ -44,15 +44,7 @@
     <TextView
         android:id="@+id/converter_activity_results"
         android:textColor="@color/white"
-        android:textSize="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/converter_activity_submit"
-        android:text="@string/main_activity_submit"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginBottom="1px"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

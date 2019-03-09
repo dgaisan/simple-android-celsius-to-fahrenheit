@@ -8,7 +8,8 @@
     <string name="main_activity_password_invalid">Invalid Password</string>
 
     <string name="converter_activity_text">Enter Degrees for Conversion:</string>
-    <string name="set_celsius">Convert To Fahrenheit</string>
-    <string name="set_fahrenheit">Convert To Celsius</string>
+    <string name="to_fahrenheit">Convert To Fahrenheit</string>
+    <string name="to_celsius">Convert To Celsius</string>
+    <string name="conversion_error">Unable To Convert</string>
 
 </resources>
